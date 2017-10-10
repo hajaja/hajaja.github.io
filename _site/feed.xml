@@ -1,31 +1,58 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.5.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2017-08-27T16:42:31+08:00</updated><id>http://localhost:4000/</id><title type="html">Sean</title><subtitle>Ph.D | Quantitative Analyst</subtitle><entry><title type="html">Time Series Momentum (Commodity Future)</title><link href="http://localhost:4000/Time-Series-Momentum/" rel="alternate" type="text/html" title="Time Series Momentum (Commodity Future)" /><published>2017-08-27T00:00:00+08:00</published><updated>2017-08-27T00:00:00+08:00</updated><id>http://localhost:4000/Time-Series-Momentum</id><content type="html" xml:base="http://localhost:4000/Time-Series-Momentum/">&lt;h1 id=&quot;time-series-momentum&quot;&gt;Time Series Momentum&lt;/h1&gt;
-&lt;p&gt;More academic resources can be found &lt;a href=&quot;https://scholar.google.com/scholar?hl=en&amp;amp;q=time+series+momentum&amp;amp;btnG=&amp;amp;as_sdt=1%2C5&amp;amp;as_sdtp=&quot;&gt;here&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;Although not a securet for a long time, following market move has been profitable in the past century&lt;a href=&quot;http://www.sciencedirect.com/science/article/pii/S0304405X11002613&quot;&gt;Moskowitz2011&lt;/a&gt;. Different trend following strategies are only different at the criterion of the start/end of a trend.&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.6.0">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2017-10-10T10:15:14+08:00</updated><id>http://localhost:4000/</id><title type="html">Sean</title><subtitle>Ph.D | Quantitative Analyst</subtitle><entry><title type="html">Time Series Carry (Commodity Future)</title><link href="http://localhost:4000/Time-Series-Carry/" rel="alternate" type="text/html" title="Time Series Carry (Commodity Future)" /><published>2017-10-10T00:00:00+08:00</published><updated>2017-10-10T00:00:00+08:00</updated><id>http://localhost:4000/Time-Series-Carry</id><content type="html" xml:base="http://localhost:4000/Time-Series-Carry/">&lt;h1 id=&quot;time-series-carry&quot;&gt;Time Series Carry&lt;/h1&gt;
+&lt;p&gt;The shrinking/enlarging of the carry return of a product also contains a trend to be captured. 
+For contango products (near month is lower than deferred month), the shrinking carry return means the deferred month price is converging to the near month, thus a short position on dominant contract is preferred.
+For backwardation products (near month is higher than deferred month), the shrinking carry return means the deferred month price is converging to the near month, thus a long position on dominant contract is preferred.&lt;/p&gt;
 
 &lt;h1 id=&quot;back-test-result&quot;&gt;Back Test Result&lt;/h1&gt;
-&lt;p&gt;The strategy is tested on all the products trading in the three Commodity Future Markets in China, including SHFE, DCE, CZCE, between Jan 1st 2005 and Aug 1st 2017. Trading cost is set at 3%% either for buy or sell, and the leverage is 250%.&lt;/p&gt;
+&lt;p&gt;The strategy is tested on all the products trading in the three Commodity Future Markets in China, including SHFE, DCE, CZCE, between Jan 1st 2005 and Aug 1st 2017. Trading cost is set at 3%% either for buy or sell, and no leverage is used. The potential risk free return is not included.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;../images/config.png&quot; alt=&quot;Figure&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;../images/TSC.png&quot; alt=&quot;Figure&quot; /&gt;&lt;/p&gt;
 
 &lt;h1 id=&quot;known-problems&quot;&gt;Known Problems&lt;/h1&gt;
 &lt;h2 id=&quot;path-dependency&quot;&gt;Path Dependency&lt;/h2&gt;
-&lt;p&gt;Once entering the market, the position will be held for a period, which means there is a period (between a week to several months, depending on the strategy parameters) when no trade happens (this strategy is different from the conventionalstrategies like DualThurst, RBreak). The final performance of the strategy is affected by the starting date of test.&lt;/p&gt;
+&lt;p&gt;In implementation, this idea is characterized by several parameters, as listed below:&lt;/p&gt;
+&lt;ol&gt;
+  &lt;li&gt;the threshold of shrinking/noise.&lt;/li&gt;
+  &lt;li&gt;the lookback period to calculate the shrinking of the carry return&lt;/li&gt;
+  &lt;li&gt;the threshold of the carry return to determine contango / backwardation.
+Potential overfitting exists in backtesting.&lt;/li&gt;
+&lt;/ol&gt;
 
-&lt;p&gt;Although there is no perfect solution on this, some statistical features are found to mitigate such dependeces.&lt;/p&gt;
+&lt;h2 id=&quot;future-works&quot;&gt;Future works&lt;/h2&gt;
+&lt;ol&gt;
+  &lt;li&gt;How to calculate the carry return. a) between the near month and the deferred month; b) between the near month and the dominant contract; c) between the dominant contract and the sub-dominant contract.&lt;/li&gt;
+  &lt;li&gt;Use moving average of the carry return, or compound carry return.&lt;/li&gt;
+&lt;/ol&gt;
 
-&lt;p&gt;Another solution is to divide all the positions into N divisions (N is the days to hold the position), and adjust position every day on one division.&lt;/p&gt;
+&lt;h2 id=&quot;conflict-with-inter-temporal-arbitrage&quot;&gt;Conflict with Inter Temporal Arbitrage&lt;/h2&gt;
+&lt;p&gt;Essentially, this strategy is like the Inter Temporal Arbitrage&lt;/p&gt;</content><author><name></name></author><summary type="html">Time Series Carry The shrinking/enlarging of the carry return of a product also contains a trend to be captured. For contango products (near month is lower than deferred month), the shrinking carry return means the deferred month price is converging to the near month, thus a short position on dominant contract is preferred. For backwardation products (near month is higher than deferred month), the shrinking carry return means the deferred month price is converging to the near month, thus a long position on dominant contract is preferred.</summary></entry><entry><title type="html">Portfolio of Stock and CTA</title><link href="http://localhost:4000/Portfolio/" rel="alternate" type="text/html" title="Portfolio of Stock and CTA" /><published>2017-10-10T00:00:00+08:00</published><updated>2017-10-10T00:00:00+08:00</updated><id>http://localhost:4000/Portfolio</id><content type="html" xml:base="http://localhost:4000/Portfolio/">&lt;h1 id=&quot;risk-parity-determine-the-strategys-weight&quot;&gt;Risk-Parity: determine the strategy’s weight&lt;/h1&gt;
+&lt;p&gt;The weight of a product’s position is determined by its standard deviation’s reciprocal. More academic resources can be found in&lt;a href=&quot;http://www.dailyalts.com/wp-content/uploads/2014/06/Risk-Parity-and-Diversification.pdf&quot;&gt;Qian2005&lt;/a&gt;&lt;/p&gt;
 
-&lt;h2 id=&quot;drop-of-performance-in-recent-years&quot;&gt;Drop of Performance in Recent Years&lt;/h2&gt;
-&lt;p&gt;Unfortunatelly, this simple Time Series Momentum strategy brings lower return and higher volatility recently. This can be partially attributed to the popularity of automatic trading in recent years. Simplly following the market may be a risky behavior in the near future.&lt;/p&gt;</content><author><name></name></author><summary type="html">Time Series Momentum More academic resources can be found here</summary></entry><entry><title type="html">Smart Carry Strategy (Commodity Future)</title><link href="http://localhost:4000/Smart-Carry/" rel="alternate" type="text/html" title="Smart Carry Strategy (Commodity Future)" /><published>2017-08-27T00:00:00+08:00</published><updated>2017-08-27T00:00:00+08:00</updated><id>http://localhost:4000/Smart-Carry</id><content type="html" xml:base="http://localhost:4000/Smart-Carry/">&lt;h1 id=&quot;carry-strategy&quot;&gt;Carry Strategy&lt;/h1&gt;
-&lt;p&gt;A currency carry trade is a strategy in which an investor sells a certain currency with a relatively low interest rate and uses the funds to purchase a different currency yielding a higher interest rate.&lt;/p&gt;
+&lt;p&gt;For better cash management, the total weight is always constant, and the individual risk is used to determine the relative importance in the portfolio.&lt;/p&gt;
+
+&lt;h1 id=&quot;component-of-different-strategies&quot;&gt;Component of different strategies&lt;/h1&gt;
+&lt;p&gt;Using risk-parity to determine weights, we can get a portfolio value for each strategy, such as the Time Series Momentum (TSM), Cross Sectional Momentum (XSM), Time Series Carry (TSC), Cross Sectional Carry (XSC). These strategies are for the commodities. 
+Also, using the French-Fama Three-Factor Model, we can get an alpha portfolio in the stock market (STOCK).&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;../images/port.png&quot; alt=&quot;Figure&quot; /&gt;&lt;/p&gt;
+
+&lt;h1 id=&quot;correlation-coefficients-of-different-strategies&quot;&gt;correlation coefficients of different strategies&lt;/h1&gt;
+
+&lt;h1 id=&quot;known-problems&quot;&gt;Known Problems&lt;/h1&gt;
+&lt;h2 id=&quot;how-to-distribute-the-weights-to-different-products&quot;&gt;How to distribute the weights to different products&lt;/h2&gt;
+&lt;ol&gt;
+  &lt;li&gt;the lookback period for calculating the product’s risk&lt;/li&gt;
+  &lt;li&gt;the method to calculate the product’s risk. a) standard deviation; b) exponential weighted moving average of standard deviation; c) other risk measures.&lt;/li&gt;
+  &lt;li&gt;how to determine the total weight of the portfolio. If all the products are volatile, then holding more cash is a better option.&lt;/li&gt;
+&lt;/ol&gt;</content><author><name></name></author><summary type="html">Risk-Parity: determine the strategy’s weight The weight of a product’s position is determined by its standard deviation’s reciprocal. More academic resources can be found inQian2005</summary></entry><entry><title type="html">Cross Sectional Carry Strategy (Commodity Future)</title><link href="http://localhost:4000/Cross-Sectional-Carry/" rel="alternate" type="text/html" title="Cross Sectional Carry Strategy (Commodity Future)" /><published>2017-10-10T00:00:00+08:00</published><updated>2017-10-10T00:00:00+08:00</updated><id>http://localhost:4000/Cross-Sectional-Carry</id><content type="html" xml:base="http://localhost:4000/Cross-Sectional-Carry/">&lt;h1 id=&quot;carry-strategy&quot;&gt;Carry Strategy&lt;/h1&gt;
+&lt;p&gt;The currency carry trade is a strategy in which an investor sells a certain currency with a relatively low interest rate and uses the funds to buy a different currency yielding a higher interest rate.&lt;/p&gt;
 
 &lt;p&gt;Although there is no interest in a commodity future contract, the discout rate plays the role. A commodity contract that is now traded at discount (with high discount rate), is equivalent with a currency with high interest rate. Assuming the the price of actuals is stable, then the price of the commodity future traded at discount rate will converge to that of the actual.&lt;/p&gt;
 
 &lt;h1 id=&quot;back-test-result&quot;&gt;Back Test Result&lt;/h1&gt;
 &lt;p&gt;The strategy is tested on all the products trading in the three Commodity Future Markets in China, including SHFE, DCE, CZCE, between Jan 1st 2005 and Aug 1st 2017. Trading cost is set at 3%% either for buy or sell, and the leverage is 250%.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;../images/config.png&quot; alt=&quot;Figure&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;../images/TS.png&quot; alt=&quot;Figure&quot; /&gt;&lt;/p&gt;
 
 &lt;h1 id=&quot;known-problems&quot;&gt;Known Problems&lt;/h1&gt;
 &lt;h2 id=&quot;path-dependency&quot;&gt;Path Dependency&lt;/h2&gt;
@@ -36,7 +63,26 @@
 &lt;p&gt;Another solution is to divide all the positions into N divisions (N is the days to hold the position), and adjust position every day on one division.&lt;/p&gt;
 
 &lt;h2 id=&quot;conflict-with-the-momentum&quot;&gt;Conflict with the Momentum&lt;/h2&gt;
-&lt;p&gt;There are times when a contract is traded at discount, while this product (including the dominant contract) is dropping. The momentum of the contract price affects the decision to follow the smart carry strategy.&lt;/p&gt;</content><author><name></name></author><summary type="html">Carry Strategy A currency carry trade is a strategy in which an investor sells a certain currency with a relatively low interest rate and uses the funds to purchase a different currency yielding a higher interest rate.</summary></entry><entry><title type="html">Adaptive Filter Strategy (Commodity Future)</title><link href="http://localhost:4000/Adaptive-Filter-Strategy/" rel="alternate" type="text/html" title="Adaptive Filter Strategy (Commodity Future)" /><published>2017-08-27T00:00:00+08:00</published><updated>2017-08-27T00:00:00+08:00</updated><id>http://localhost:4000/Adaptive-Filter-Strategy</id><content type="html" xml:base="http://localhost:4000/Adaptive-Filter-Strategy/">&lt;h1 id=&quot;trend-from-a-frequency-domain-perspective&quot;&gt;Trend from a Frequency Domain Perspective&lt;/h1&gt;
+&lt;p&gt;There are times when a contract is traded at discount, while this product (including the dominant contract) is dropping. The momentum of the contract price affects the decision to follow the smart carry strategy.&lt;/p&gt;</content><author><name></name></author><summary type="html">Carry Strategy The currency carry trade is a strategy in which an investor sells a certain currency with a relatively low interest rate and uses the funds to buy a different currency yielding a higher interest rate.</summary></entry><entry><title type="html">Time Series Momentum (Commodity Future)</title><link href="http://localhost:4000/Time-Series-Momentum/" rel="alternate" type="text/html" title="Time Series Momentum (Commodity Future)" /><published>2017-08-27T00:00:00+08:00</published><updated>2017-08-27T00:00:00+08:00</updated><id>http://localhost:4000/Time-Series-Momentum</id><content type="html" xml:base="http://localhost:4000/Time-Series-Momentum/">&lt;h1 id=&quot;time-series-momentum&quot;&gt;Time Series Momentum&lt;/h1&gt;
+&lt;p&gt;More academic resources can be found &lt;a href=&quot;https://scholar.google.com/scholar?hl=en&amp;amp;q=time+series+momentum&amp;amp;btnG=&amp;amp;as_sdt=1%2C5&amp;amp;as_sdtp=&quot;&gt;here&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Although not a securet for a long time, following market move has been profitable in the past century&lt;a href=&quot;http://www.sciencedirect.com/science/article/pii/S0304405X11002613&quot;&gt;Moskowitz2011&lt;/a&gt;. Different trend following strategies are only different at the criterion of the start/end of a trend.&lt;/p&gt;
+
+&lt;h1 id=&quot;back-test-result&quot;&gt;Back Test Result&lt;/h1&gt;
+&lt;p&gt;The strategy is tested on all the products trading in the three Commodity Future Markets in China, including SHFE, DCE, CZCE, between Jan 1st 2005 and Aug 1st 2017. Trading cost is set at 3%% either for buy or sell, and no leverage is used. The potential risk free return is not included.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;../images/TSM.png&quot; alt=&quot;Figure&quot; /&gt;&lt;/p&gt;
+
+&lt;h1 id=&quot;known-problems&quot;&gt;Known Problems&lt;/h1&gt;
+&lt;h2 id=&quot;path-dependency&quot;&gt;Path Dependency&lt;/h2&gt;
+&lt;p&gt;Once entering the market, the position will be held for a period, which means there is a period (between a week to several months, depending on the strategy parameters) when no trade happens (this strategy is different from the conventionalstrategies like DualThurst, RBreak). The final performance of the strategy is affected by the starting date of test.&lt;/p&gt;
+
+&lt;p&gt;Although there is no perfect solution on this, some statistical features are found to mitigate such dependeces.&lt;/p&gt;
+
+&lt;p&gt;Another solution is to divide all the positions into N divisions (N is the days to hold the position), and adjust position every day on one division.&lt;/p&gt;
+
+&lt;h2 id=&quot;drop-of-performance-in-recent-years&quot;&gt;Drop of Performance in Recent Years&lt;/h2&gt;
+&lt;p&gt;Unfortunatelly, this simple Time Series Momentum strategy brings lower return and higher volatility recently. This can be partially attributed to the popularity of automatic trading in recent years. Simplly following the market may be a risky behavior in the near future.&lt;/p&gt;</content><author><name></name></author><summary type="html">Time Series Momentum More academic resources can be found here</summary></entry><entry><title type="html">Adaptive Filter Strategy (Commodity Future)</title><link href="http://localhost:4000/Adaptive-Filter-Strategy/" rel="alternate" type="text/html" title="Adaptive Filter Strategy (Commodity Future)" /><published>2017-08-27T00:00:00+08:00</published><updated>2017-08-27T00:00:00+08:00</updated><id>http://localhost:4000/Adaptive-Filter-Strategy</id><content type="html" xml:base="http://localhost:4000/Adaptive-Filter-Strategy/">&lt;h1 id=&quot;trend-from-a-frequency-domain-perspective&quot;&gt;Trend from a Frequency Domain Perspective&lt;/h1&gt;
 &lt;p&gt;5 day Moving Average is equivalent with a low pass fitler with coefficients b = [0.2, 0.2, 0.2, 0.2, 0.2] and a = 1. 
 The volatility is relatively high frequency (from day to day change), when compared with the price move on a 5 day range. The trend is mostly hidden in the low-frequency area in the frequency domain.&lt;/p&gt;
 
