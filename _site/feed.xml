@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.6.0">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2017-10-10T10:15:14+08:00</updated><id>http://localhost:4000/</id><title type="html">Sean</title><subtitle>Ph.D | Quantitative Analyst</subtitle><entry><title type="html">Time Series Carry (Commodity Future)</title><link href="http://localhost:4000/Time-Series-Carry/" rel="alternate" type="text/html" title="Time Series Carry (Commodity Future)" /><published>2017-10-10T00:00:00+08:00</published><updated>2017-10-10T00:00:00+08:00</updated><id>http://localhost:4000/Time-Series-Carry</id><content type="html" xml:base="http://localhost:4000/Time-Series-Carry/">&lt;h1 id=&quot;time-series-carry&quot;&gt;Time Series Carry&lt;/h1&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.6.0">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2017-10-10T17:52:13+08:00</updated><id>http://localhost:4000/</id><title type="html">Sean</title><subtitle>Ph.D | Quantitative Analyst</subtitle><entry><title type="html">Time Series Carry (Commodity Future)</title><link href="http://localhost:4000/Time-Series-Carry/" rel="alternate" type="text/html" title="Time Series Carry (Commodity Future)" /><published>2017-10-10T00:00:00+08:00</published><updated>2017-10-10T00:00:00+08:00</updated><id>http://localhost:4000/Time-Series-Carry</id><content type="html" xml:base="http://localhost:4000/Time-Series-Carry/">&lt;h1 id=&quot;time-series-carry&quot;&gt;Time Series Carry&lt;/h1&gt;
 &lt;p&gt;The shrinking/enlarging of the carry return of a product also contains a trend to be captured. 
 For contango products (near month is lower than deferred month), the shrinking carry return means the deferred month price is converging to the near month, thus a short position on dominant contract is preferred.
 For backwardation products (near month is higher than deferred month), the shrinking carry return means the deferred month price is converging to the near month, thus a long position on dominant contract is preferred.&lt;/p&gt;
@@ -26,7 +26,7 @@ Potential overfitting exists in backtesting.&lt;/li&gt;
 
 &lt;h2 id=&quot;conflict-with-inter-temporal-arbitrage&quot;&gt;Conflict with Inter Temporal Arbitrage&lt;/h2&gt;
 &lt;p&gt;Essentially, this strategy is like the Inter Temporal Arbitrage&lt;/p&gt;</content><author><name></name></author><summary type="html">Time Series Carry The shrinking/enlarging of the carry return of a product also contains a trend to be captured. For contango products (near month is lower than deferred month), the shrinking carry return means the deferred month price is converging to the near month, thus a short position on dominant contract is preferred. For backwardation products (near month is higher than deferred month), the shrinking carry return means the deferred month price is converging to the near month, thus a long position on dominant contract is preferred.</summary></entry><entry><title type="html">Portfolio of Stock and CTA</title><link href="http://localhost:4000/Portfolio/" rel="alternate" type="text/html" title="Portfolio of Stock and CTA" /><published>2017-10-10T00:00:00+08:00</published><updated>2017-10-10T00:00:00+08:00</updated><id>http://localhost:4000/Portfolio</id><content type="html" xml:base="http://localhost:4000/Portfolio/">&lt;h1 id=&quot;risk-parity-determine-the-strategys-weight&quot;&gt;Risk-Parity: determine the strategy’s weight&lt;/h1&gt;
-&lt;p&gt;The weight of a product’s position is determined by its standard deviation’s reciprocal. More academic resources can be found in&lt;a href=&quot;http://www.dailyalts.com/wp-content/uploads/2014/06/Risk-Parity-and-Diversification.pdf&quot;&gt;Qian2005&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;The weight of a product’s position is determined by its standard deviation’s reciprocal. More academic resources can be found in &lt;a href=&quot;http://www.dailyalts.com/wp-content/uploads/2014/06/Risk-Parity-and-Diversification.pdf&quot;&gt;Qian2005&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;For better cash management, the total weight is always constant, and the individual risk is used to determine the relative importance in the portfolio.&lt;/p&gt;
 
@@ -34,7 +34,7 @@ Potential overfitting exists in backtesting.&lt;/li&gt;
 &lt;p&gt;Using risk-parity to determine weights, we can get a portfolio value for each strategy, such as the Time Series Momentum (TSM), Cross Sectional Momentum (XSM), Time Series Carry (TSC), Cross Sectional Carry (XSC). These strategies are for the commodities. 
 Also, using the French-Fama Three-Factor Model, we can get an alpha portfolio in the stock market (STOCK).&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;../images/port.png&quot; alt=&quot;Figure&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;../images/Port.png&quot; alt=&quot;Figure&quot; /&gt;&lt;/p&gt;
 
 &lt;h1 id=&quot;correlation-coefficients-of-different-strategies&quot;&gt;correlation coefficients of different strategies&lt;/h1&gt;
 
@@ -44,7 +44,26 @@ Also, using the French-Fama Three-Factor Model, we can get an alpha portfolio in
   &lt;li&gt;the lookback period for calculating the product’s risk&lt;/li&gt;
   &lt;li&gt;the method to calculate the product’s risk. a) standard deviation; b) exponential weighted moving average of standard deviation; c) other risk measures.&lt;/li&gt;
   &lt;li&gt;how to determine the total weight of the portfolio. If all the products are volatile, then holding more cash is a better option.&lt;/li&gt;
-&lt;/ol&gt;</content><author><name></name></author><summary type="html">Risk-Parity: determine the strategy’s weight The weight of a product’s position is determined by its standard deviation’s reciprocal. More academic resources can be found inQian2005</summary></entry><entry><title type="html">Cross Sectional Carry Strategy (Commodity Future)</title><link href="http://localhost:4000/Cross-Sectional-Carry/" rel="alternate" type="text/html" title="Cross Sectional Carry Strategy (Commodity Future)" /><published>2017-10-10T00:00:00+08:00</published><updated>2017-10-10T00:00:00+08:00</updated><id>http://localhost:4000/Cross-Sectional-Carry</id><content type="html" xml:base="http://localhost:4000/Cross-Sectional-Carry/">&lt;h1 id=&quot;carry-strategy&quot;&gt;Carry Strategy&lt;/h1&gt;
+&lt;/ol&gt;</content><author><name></name></author><summary type="html">Risk-Parity: determine the strategy’s weight The weight of a product’s position is determined by its standard deviation’s reciprocal. More academic resources can be found in Qian2005</summary></entry><entry><title type="html">Model Review</title><link href="http://localhost:4000/Model-Review/" rel="alternate" type="text/html" title="Model Review" /><published>2017-10-10T00:00:00+08:00</published><updated>2017-10-10T00:00:00+08:00</updated><id>http://localhost:4000/Model-Review</id><content type="html" xml:base="http://localhost:4000/Model-Review/">&lt;h1 id=&quot;what-is-model-review&quot;&gt;What is Model Review&lt;/h1&gt;
+&lt;p&gt;Any strategy is dependent on parameters. Constant parameters are preferred. However, the parameters are usually changing. We define the process to tune the parameters as “Model Review”.&lt;/p&gt;
+
+&lt;p&gt;Although this process is to tune parameters, it needs new parameters itself:&lt;/p&gt;
+&lt;ol&gt;
+  &lt;li&gt;the lookback period to calculate what is the best parameter, NMonthLookBack&lt;/li&gt;
+  &lt;li&gt;the period to conduct model review, NMonthModelReview&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;Example: for Time Series Momentum, we have parameters NDayTrain, NDayTest, NDayShift, NWeekStart to review. The best set of parameters is determined on its performance in the past NMonthLookBack, and the model review process will be conducted NMonthModelReview later.&lt;/p&gt;
+
+&lt;h1 id=&quot;what-is-the-best-nmonthlookback-nmonthmodelreview&quot;&gt;What is the best (NMonthLookBack, NMonthModelReview)&lt;/h1&gt;
+&lt;p&gt;For each (NMonthLookBack, NMonthModelReview), we have 10 value series with different review start date. Among them, the one with mininmum CR (worst) is selected as the score of this (NMonthLookBack, NMonthModelReview), which means we care the worst performance of (NMonthLookBack, NMonthModelReview). Of course, the (NMonthLookBack, NMonthModelReview) with the best worst-case performance is used, and its worst-case value series is as the Model Review version performance of the strategy.&lt;/p&gt;
+
+&lt;h1 id=&quot;known-problems&quot;&gt;Known problems&lt;/h1&gt;
+&lt;h2 id=&quot;the-path-dependency&quot;&gt;The path dependency&lt;/h2&gt;
+&lt;p&gt;The path dependency is only partially solved by use 10 different review start dates. Actually, a more reasonable method to determine the review start dates is also necessary&lt;/p&gt;
+
+&lt;h2 id=&quot;how-to-tune-nmonthlookback-nmonthmodelreview&quot;&gt;How to tune (NMonthLookBack, NMonthModelReview)&lt;/h2&gt;
+&lt;p&gt;The process of tuning parameter is always relying on new parmeter, and this is infinite loop. To solve this, we review the NMonthModelReview and NMonthLookBack every year, and this is fixed.&lt;/p&gt;</content><author><name></name></author><summary type="html">What is Model Review Any strategy is dependent on parameters. Constant parameters are preferred. However, the parameters are usually changing. We define the process to tune the parameters as “Model Review”.</summary></entry><entry><title type="html">Cross Sectional Carry Strategy (Commodity Future)</title><link href="http://localhost:4000/Cross-Sectional-Carry/" rel="alternate" type="text/html" title="Cross Sectional Carry Strategy (Commodity Future)" /><published>2017-10-10T00:00:00+08:00</published><updated>2017-10-10T00:00:00+08:00</updated><id>http://localhost:4000/Cross-Sectional-Carry</id><content type="html" xml:base="http://localhost:4000/Cross-Sectional-Carry/">&lt;h1 id=&quot;carry-strategy&quot;&gt;Carry Strategy&lt;/h1&gt;
 &lt;p&gt;The currency carry trade is a strategy in which an investor sells a certain currency with a relatively low interest rate and uses the funds to buy a different currency yielding a higher interest rate.&lt;/p&gt;
 
 &lt;p&gt;Although there is no interest in a commodity future contract, the discout rate plays the role. A commodity contract that is now traded at discount (with high discount rate), is equivalent with a currency with high interest rate. Assuming the the price of actuals is stable, then the price of the commodity future traded at discount rate will converge to that of the actual.&lt;/p&gt;
@@ -52,7 +71,7 @@ Also, using the French-Fama Three-Factor Model, we can get an alpha portfolio in
 &lt;h1 id=&quot;back-test-result&quot;&gt;Back Test Result&lt;/h1&gt;
 &lt;p&gt;The strategy is tested on all the products trading in the three Commodity Future Markets in China, including SHFE, DCE, CZCE, between Jan 1st 2005 and Aug 1st 2017. Trading cost is set at 3%% either for buy or sell, and the leverage is 250%.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;../images/TS.png&quot; alt=&quot;Figure&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;../images/XSC.png&quot; alt=&quot;Figure&quot; /&gt;&lt;/p&gt;
 
 &lt;h1 id=&quot;known-problems&quot;&gt;Known Problems&lt;/h1&gt;
 &lt;h2 id=&quot;path-dependency&quot;&gt;Path Dependency&lt;/h2&gt;
@@ -61,6 +80,12 @@ Also, using the French-Fama Three-Factor Model, we can get an alpha portfolio in
 &lt;p&gt;Although there is no perfect solution on this, some statistical features are found to mitigate such dependeces.&lt;/p&gt;
 
 &lt;p&gt;Another solution is to divide all the positions into N divisions (N is the days to hold the position), and adjust position every day on one division.&lt;/p&gt;
+
+&lt;h2 id=&quot;trading-on-friday&quot;&gt;Trading on Friday&lt;/h2&gt;
+&lt;p&gt;The performance of the strategy is partially affected by the day of week. Usually, Friday is the best day to trade. It is a statistical phenomenon.&lt;/p&gt;
+
+&lt;h2 id=&quot;trading-in-third-week&quot;&gt;Trading in Third Week&lt;/h2&gt;
+&lt;p&gt;This is mostly due to deliving setting. Deliverying happens in the 3rd Friday of each month.&lt;/p&gt;
 
 &lt;h2 id=&quot;conflict-with-the-momentum&quot;&gt;Conflict with the Momentum&lt;/h2&gt;
 &lt;p&gt;There are times when a contract is traded at discount, while this product (including the dominant contract) is dropping. The momentum of the contract price affects the decision to follow the smart carry strategy.&lt;/p&gt;</content><author><name></name></author><summary type="html">Carry Strategy The currency carry trade is a strategy in which an investor sells a certain currency with a relatively low interest rate and uses the funds to buy a different currency yielding a higher interest rate.</summary></entry><entry><title type="html">Time Series Momentum (Commodity Future)</title><link href="http://localhost:4000/Time-Series-Momentum/" rel="alternate" type="text/html" title="Time Series Momentum (Commodity Future)" /><published>2017-08-27T00:00:00+08:00</published><updated>2017-08-27T00:00:00+08:00</updated><id>http://localhost:4000/Time-Series-Momentum</id><content type="html" xml:base="http://localhost:4000/Time-Series-Momentum/">&lt;h1 id=&quot;time-series-momentum&quot;&gt;Time Series Momentum&lt;/h1&gt;
