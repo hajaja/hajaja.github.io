@@ -11,12 +11,12 @@
     
     <meta name="description" content="Trend from a Frequency Domain Perspective
 5 day Moving Average is equivalent with a low pass fitler with coefficients b = [0.2, 0.2, 0.2, 0.2, 0.2] and a = 1. 
-The volatility is relatively high frequency (from day to day change), when compared with the price move on a 5 day range. The trend is mostly hidden in the low-frequency area in the frequency domain.
+The volatility is relatively high frequency (from day to day), when compared with the price move on a 5 day range. The trend is mostly hidden in the low-frequency area in the frequency domain.
 
 " />
     <meta property="og:description" content="Trend from a Frequency Domain Perspective
 5 day Moving Average is equivalent with a low pass fitler with coefficients b = [0.2, 0.2, 0.2, 0.2, 0.2] and a = 1. 
-The volatility is relatively high frequency (from day to day change), when compared with the price move on a 5 day range. The trend is mostly hidden in the low-frequency area in the frequency domain.
+The volatility is relatively high frequency (from day to day), when compared with the price move on a 5 day range. The trend is mostly hidden in the low-frequency area in the frequency domain.
 
 " />
     
@@ -63,14 +63,22 @@ The volatility is relatively high frequency (from day to day change), when compa
   <div class="entry">
     <h1 id="trend-from-a-frequency-domain-perspective">Trend from a Frequency Domain Perspective</h1>
 <p>5 day Moving Average is equivalent with a low pass fitler with coefficients b = [0.2, 0.2, 0.2, 0.2, 0.2] and a = 1. 
-The volatility is relatively high frequency (from day to day change), when compared with the price move on a 5 day range. The trend is mostly hidden in the low-frequency area in the frequency domain.</p>
+The volatility is relatively high frequency (from day to day), when compared with the price move on a 5 day range. The trend is mostly hidden in the low-frequency area in the frequency domain.</p>
 
-<p>All the efforts to recognize the trend of price movement is actually searching for the informative low frequency components in the frequency domain. Shedding the communicaition techniques on the strategy field, we can leverage the mature filter design on our tasks.</p>
+<p>All the efforts to recognize the trend of price movement is actually searching for the informative low frequency components in the frequency domain. Shedding the communicaition techniques on the strategy field, we can leverage the filter design knowledge on our tasks.</p>
+
+<h1 id="filters">Filters</h1>
+<p>In terms of frequency response, filters can be classified into low pass filter, high pass filter, band pass filter, band stop filter. Because trend is usually hidden in the low frequency domain, low pass filter (LP) and band pass filter (BP) are used in our tasks.</p>
+
+<p>Digital filters can be classfied into two types: IIR and FIR. 
+IIR has short latency, but it is not stable (output is feedbacked to intput). 
+FIR has long latency, but it is stable. 
+For now, FIR is used to extract the low frequency domain trend.</p>
 
 <h1 id="back-test-result">Back Test Result</h1>
-<p>The strategy is tested on all the products trading in the three Commodity Future Markets in China, including SHFE, DCE, CZCE, between Jan 1st 2005 and Aug 1st 2017. Trading cost is set at 3%% either for buy or sell, and the leverage is 250%.</p>
+<p>The strategy is tested on all the products trading in the three Commodity Future Markets in China, including SHFE, DCE, CZCE, between Jan 1st 2005 and Aug 1st 2017. Trading cost is set at 3%% either for buy or sell.</p>
 
-<p><img src="../images/config.png" alt="Figure" /></p>
+<p><img src="../images/FD.png" alt="Figure" /></p>
 
 <h1 id="known-problems">Known Problems</h1>
 <h2 id="latency-of-the-filter">Latency of the Filter</h2>

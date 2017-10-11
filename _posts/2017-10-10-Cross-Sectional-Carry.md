@@ -2,8 +2,6 @@
 layout: post
 title: Cross Sectional Carry Strategy (Commodity Future)
 ---
-
-# Carry Strategy
 The currency carry trade is a strategy in which an investor sells a certain currency with a relatively low interest rate and uses the funds to buy a different currency yielding a higher interest rate. 
 
 Although there is no interest in a commodity future contract, the discout rate plays the role. A commodity contract that is now traded at discount (with high discount rate), is equivalent with a currency with high interest rate. Assuming the the price of actuals is stable, then the price of the commodity future traded at discount rate will converge to that of the actual. 

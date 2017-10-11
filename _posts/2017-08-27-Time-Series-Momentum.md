@@ -2,8 +2,6 @@
 layout: post
 title: Time Series Momentum (Commodity Future)
 ---
-
-# Time Series Momentum 
 More academic resources can be found [here](https://scholar.google.com/scholar?hl=en&q=time+series+momentum&btnG=&as_sdt=1%2C5&as_sdtp=)
 
 Although not a securet for a long time, following market move has been profitable in the past century[Moskowitz2011](http://www.sciencedirect.com/science/article/pii/S0304405X11002613). Different trend following strategies are only different at the criterion of the start/end of a trend. 

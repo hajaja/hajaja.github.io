@@ -2,7 +2,6 @@
 layout: post
 title: Model Review
 ---
-# What is Model Review
 Any strategy is dependent on parameters. Constant parameters are preferred. However, the parameters are usually changing. We define the process to tune the parameters as "Model Review". 
 
 Although this process is to tune parameters, it needs new parameters itself:

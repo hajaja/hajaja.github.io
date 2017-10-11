@@ -1,4 +1,75 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.6.0">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2017-10-10T17:52:13+08:00</updated><id>http://localhost:4000/</id><title type="html">Sean</title><subtitle>Ph.D | Quantitative Analyst</subtitle><entry><title type="html">Time Series Carry (Commodity Future)</title><link href="http://localhost:4000/Time-Series-Carry/" rel="alternate" type="text/html" title="Time Series Carry (Commodity Future)" /><published>2017-10-10T00:00:00+08:00</published><updated>2017-10-10T00:00:00+08:00</updated><id>http://localhost:4000/Time-Series-Carry</id><content type="html" xml:base="http://localhost:4000/Time-Series-Carry/">&lt;h1 id=&quot;time-series-carry&quot;&gt;Time Series Carry&lt;/h1&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.6.0">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2017-10-11T12:25:47+08:00</updated><id>http://localhost:4000/</id><title type="html">Sean</title><subtitle>Ph.D | Quantitative Analyst</subtitle><entry><title type="html">Technical Strategies (Commodity Future)</title><link href="http://localhost:4000/Technical-Strategies/" rel="alternate" type="text/html" title="Technical Strategies (Commodity Future)" /><published>2017-10-11T00:00:00+08:00</published><updated>2017-10-11T00:00:00+08:00</updated><id>http://localhost:4000/Technical-Strategies</id><content type="html" xml:base="http://localhost:4000/Technical-Strategies/">&lt;h1 id=&quot;technical-analysis&quot;&gt;Technical Analysis&lt;/h1&gt;
+&lt;p&gt;Most techincal analysis strategies focus on trend following, and a smaller part on contrarian. Currently, we mainly focus on trend following.&lt;/p&gt;
+
+&lt;p&gt;The recognition of a trend starts from a breakout. Usually there are two rails, upper and lower. The upward break of the upper rail means the start of up trend, and the downward break of the lower rail means the start of down trend.&lt;/p&gt;
+
+&lt;p&gt;The famous &lt;a href=&quot;http://bigpicture.typepad.com/comments/files/turtlerules.pdf&quot;&gt;turtle rules&lt;/a&gt; are relying on the breaks, however, the more important part of the turtle rules is the distribution on positions. Products with high risk (large standard deviation in the past period) have lower weigths in the portfolio, and those with low risk have larger weights. This is actually the same with the Risk-Parity concept. How to calculate risk is another interesting problem, but for now, we only use the standard deviation.&lt;/p&gt;
+
+&lt;h1 id=&quot;dualthrust&quot;&gt;DualThrust&lt;/h1&gt;
+&lt;p&gt;A simple introduction can be found here &lt;a href=&quot;https://www.quantconnect.com/tutorials/dual-thrust-trading-algorithm/&quot;&gt;Dual Thrust Trading Algorithm&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;low-frequency-rails-daily-bar&quot;&gt;Low Frequency Rails (daily bar)&lt;/h2&gt;
+&lt;ol&gt;
+  &lt;li&gt;Upper rail: Open + Interval (determined by past High, Low, Close)&lt;/li&gt;
+  &lt;li&gt;Lower rail: Open - Interval (determined by past High, Low, Close)&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h2 id=&quot;high-frequency-rails-1min-bar&quot;&gt;High Frequency Rails (1min bar)&lt;/h2&gt;
+&lt;p&gt;DualThrust does not have high frequency rails.&lt;/p&gt;
+
+&lt;h2 id=&quot;back-test-result&quot;&gt;Back Test Result&lt;/h2&gt;
+&lt;p&gt;&lt;img src=&quot;../images/DualThrust.png&quot; alt=&quot;Figure&quot; /&gt;&lt;/p&gt;
+
+&lt;h1 id=&quot;dynamicbreakout&quot;&gt;DynamicBreakOut&lt;/h1&gt;
+&lt;p&gt;&lt;a href=&quot;https://www.quantconnect.com/tutorials/dynamic-breakout-ii-strategy/&quot;&gt;Dynamic Break Out&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;low-frequency-rails-daily-bar-1&quot;&gt;Low Frequency Rails (daily bar)&lt;/h2&gt;
+&lt;ol&gt;
+  &lt;li&gt;Upper rail: Bollinger Band Upper Rail&lt;/li&gt;
+  &lt;li&gt;Lower rail: Bollinger Band Lower Rail&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h2 id=&quot;high-frequency-rails-1min-bar-1&quot;&gt;High Frequency Rails (1min bar)&lt;/h2&gt;
+&lt;ol&gt;
+  &lt;li&gt;Upper rail: moving average of daily high&lt;/li&gt;
+  &lt;li&gt;Lower rail: moving average of daily low&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h2 id=&quot;back-test-result-1&quot;&gt;Back Test Result&lt;/h2&gt;
+&lt;p&gt;&lt;img src=&quot;../images/DynamicBreakOut.png&quot; alt=&quot;Figure&quot; /&gt;&lt;/p&gt;
+
+&lt;h1 id=&quot;keltner&quot;&gt;Keltner&lt;/h1&gt;
+&lt;p&gt;&lt;a href=&quot;https://www.thebalance.com/how-to-day-with-trade-keltner-channels-4051613&quot;&gt;Keltner Strategy&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;low-frequency-rails-daily-bar-2&quot;&gt;Low Frequency Rails (daily bar)&lt;/h2&gt;
+&lt;p&gt;No low frequency rails.&lt;/p&gt;
+
+&lt;h2 id=&quot;high-frequency-rails-1min-bar-2&quot;&gt;High Frequency Rails (1min bar)&lt;/h2&gt;
+&lt;ol&gt;
+  &lt;li&gt;Upper rail: moving average of close (1min) + ATR (1min)&lt;/li&gt;
+  &lt;li&gt;Lower rail: moving average of close (1min) - ATR (1min)&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h2 id=&quot;back-test-result-2&quot;&gt;Back Test Result&lt;/h2&gt;
+&lt;p&gt;&lt;img src=&quot;../images/Keltner.png&quot; alt=&quot;Figure&quot; /&gt;&lt;/p&gt;
+
+&lt;h1 id=&quot;dochian&quot;&gt;Dochian&lt;/h1&gt;
+&lt;p&gt;&lt;a href=&quot;https://admiralmarkets.com/education/articles/forex-indicators/what-everyone-should-know-about-the-donchian-channel-indicator&quot;&gt;Dochian Strategy&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;low-frequency-rails-daily-bar-3&quot;&gt;Low Frequency Rails (daily bar)&lt;/h2&gt;
+&lt;p&gt;No low frequency rails.&lt;/p&gt;
+
+&lt;h2 id=&quot;high-frequency-rails-1min-bar-3&quot;&gt;High Frequency Rails (1min bar)&lt;/h2&gt;
+&lt;ol&gt;
+  &lt;li&gt;Upper rail: moving average of high (1min)&lt;/li&gt;
+  &lt;li&gt;Lower rail: moving average of low (1min)&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h2 id=&quot;back-test-result-3&quot;&gt;Back Test Result&lt;/h2&gt;
+&lt;p&gt;&lt;img src=&quot;../images/Dochian.png&quot; alt=&quot;Figure&quot; /&gt;&lt;/p&gt;
+
+&lt;h1 id=&quot;summary&quot;&gt;Summary&lt;/h1&gt;
+&lt;p&gt;The strategies are relying on a lot of parameters defining the rails and intervals. Thus, overfitting may exists among them. Trend following is the most successful strategy in the past two century &lt;a href=&quot;https://arxiv.org/abs/1404.3274&quot;&gt;Two centuries of trend following&lt;/a&gt;, the trend recognition deserves more exploration.&lt;/p&gt;</content><author><name></name></author><summary type="html">Technical Analysis Most techincal analysis strategies focus on trend following, and a smaller part on contrarian. Currently, we mainly focus on trend following.</summary></entry><entry><title type="html">Time Series Carry (Commodity Future)</title><link href="http://localhost:4000/Time-Series-Carry/" rel="alternate" type="text/html" title="Time Series Carry (Commodity Future)" /><published>2017-10-10T00:00:00+08:00</published><updated>2017-10-10T00:00:00+08:00</updated><id>http://localhost:4000/Time-Series-Carry</id><content type="html" xml:base="http://localhost:4000/Time-Series-Carry/">&lt;h1 id=&quot;time-series-carry&quot;&gt;Time Series Carry&lt;/h1&gt;
 &lt;p&gt;The shrinking/enlarging of the carry return of a product also contains a trend to be captured. 
 For contango products (near month is lower than deferred month), the shrinking carry return means the deferred month price is converging to the near month, thus a short position on dominant contract is preferred.
 For backwardation products (near month is higher than deferred month), the shrinking carry return means the deferred month price is converging to the near month, thus a long position on dominant contract is preferred.&lt;/p&gt;
@@ -35,6 +106,8 @@ Potential overfitting exists in backtesting.&lt;/li&gt;
 Also, using the French-Fama Three-Factor Model, we can get an alpha portfolio in the stock market (STOCK).&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&quot;../images/Port.png&quot; alt=&quot;Figure&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;The alpha portfolio is constructed using the Eugene-Fama three factor model, exposing to the Price to Book Value and the Non Restricted Cap.&lt;/p&gt;
 
 &lt;h1 id=&quot;correlation-coefficients-of-different-strategies&quot;&gt;correlation coefficients of different strategies&lt;/h1&gt;
 
@@ -109,15 +182,23 @@ Also, using the French-Fama Three-Factor Model, we can get an alpha portfolio in
 &lt;h2 id=&quot;drop-of-performance-in-recent-years&quot;&gt;Drop of Performance in Recent Years&lt;/h2&gt;
 &lt;p&gt;Unfortunatelly, this simple Time Series Momentum strategy brings lower return and higher volatility recently. This can be partially attributed to the popularity of automatic trading in recent years. Simplly following the market may be a risky behavior in the near future.&lt;/p&gt;</content><author><name></name></author><summary type="html">Time Series Momentum More academic resources can be found here</summary></entry><entry><title type="html">Adaptive Filter Strategy (Commodity Future)</title><link href="http://localhost:4000/Adaptive-Filter-Strategy/" rel="alternate" type="text/html" title="Adaptive Filter Strategy (Commodity Future)" /><published>2017-08-27T00:00:00+08:00</published><updated>2017-08-27T00:00:00+08:00</updated><id>http://localhost:4000/Adaptive-Filter-Strategy</id><content type="html" xml:base="http://localhost:4000/Adaptive-Filter-Strategy/">&lt;h1 id=&quot;trend-from-a-frequency-domain-perspective&quot;&gt;Trend from a Frequency Domain Perspective&lt;/h1&gt;
 &lt;p&gt;5 day Moving Average is equivalent with a low pass fitler with coefficients b = [0.2, 0.2, 0.2, 0.2, 0.2] and a = 1. 
-The volatility is relatively high frequency (from day to day change), when compared with the price move on a 5 day range. The trend is mostly hidden in the low-frequency area in the frequency domain.&lt;/p&gt;
+The volatility is relatively high frequency (from day to day), when compared with the price move on a 5 day range. The trend is mostly hidden in the low-frequency area in the frequency domain.&lt;/p&gt;
 
-&lt;p&gt;All the efforts to recognize the trend of price movement is actually searching for the informative low frequency components in the frequency domain. Shedding the communicaition techniques on the strategy field, we can leverage the mature filter design on our tasks.&lt;/p&gt;
+&lt;p&gt;All the efforts to recognize the trend of price movement is actually searching for the informative low frequency components in the frequency domain. Shedding the communicaition techniques on the strategy field, we can leverage the filter design knowledge on our tasks.&lt;/p&gt;
+
+&lt;h1 id=&quot;filters&quot;&gt;Filters&lt;/h1&gt;
+&lt;p&gt;In terms of frequency response, filters can be classified into low pass filter, high pass filter, band pass filter, band stop filter. Because trend is usually hidden in the low frequency domain, low pass filter (LP) and band pass filter (BP) are used in our tasks.&lt;/p&gt;
+
+&lt;p&gt;Digital filters can be classfied into two types: IIR and FIR. 
+IIR has short latency, but it is not stable (output is feedbacked to intput). 
+FIR has long latency, but it is stable. 
+For now, FIR is used to extract the low frequency domain trend.&lt;/p&gt;
 
 &lt;h1 id=&quot;back-test-result&quot;&gt;Back Test Result&lt;/h1&gt;
-&lt;p&gt;The strategy is tested on all the products trading in the three Commodity Future Markets in China, including SHFE, DCE, CZCE, between Jan 1st 2005 and Aug 1st 2017. Trading cost is set at 3%% either for buy or sell, and the leverage is 250%.&lt;/p&gt;
+&lt;p&gt;The strategy is tested on all the products trading in the three Commodity Future Markets in China, including SHFE, DCE, CZCE, between Jan 1st 2005 and Aug 1st 2017. Trading cost is set at 3%% either for buy or sell.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;../images/config.png&quot; alt=&quot;Figure&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;../images/FD.png&quot; alt=&quot;Figure&quot; /&gt;&lt;/p&gt;
 
 &lt;h1 id=&quot;known-problems&quot;&gt;Known Problems&lt;/h1&gt;
 &lt;h2 id=&quot;latency-of-the-filter&quot;&gt;Latency of the Filter&lt;/h2&gt;
-&lt;p&gt;Let us use the 5 day Moving Average line again. The average price we found on Day 5 is actually corresponding to the trend of the 3 day, the 2 day latency is the obastacle of using the filter techniques. However, we can never know the real trend on Day 5, because it is relying on the Day 3, Day 4, Day 5, Day 6 (Future), Day 7(Future) data.&lt;/p&gt;</content><author><name></name></author><summary type="html">Trend from a Frequency Domain Perspective 5 day Moving Average is equivalent with a low pass fitler with coefficients b = [0.2, 0.2, 0.2, 0.2, 0.2] and a = 1. The volatility is relatively high frequency (from day to day change), when compared with the price move on a 5 day range. The trend is mostly hidden in the low-frequency area in the frequency domain.</summary></entry></feed>
+&lt;p&gt;Let us use the 5 day Moving Average line again. The average price we found on Day 5 is actually corresponding to the trend of the 3 day, the 2 day latency is the obastacle of using the filter techniques. However, we can never know the real trend on Day 5, because it is relying on the Day 3, Day 4, Day 5, Day 6 (Future), Day 7(Future) data.&lt;/p&gt;</content><author><name></name></author><summary type="html">Trend from a Frequency Domain Perspective 5 day Moving Average is equivalent with a low pass fitler with coefficients b = [0.2, 0.2, 0.2, 0.2, 0.2] and a = 1. The volatility is relatively high frequency (from day to day), when compared with the price move on a 5 day range. The trend is mostly hidden in the low-frequency area in the frequency domain.</summary></entry></feed>
