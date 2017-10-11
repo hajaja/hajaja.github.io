@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Model Review
+title: Model Review (Portfolio)
 ---
 Any strategy is dependent on parameters. Constant parameters are preferred. However, the parameters are usually changing. We define the process to tune the parameters as "Model Review". 
 

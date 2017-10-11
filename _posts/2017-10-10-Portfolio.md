@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Portfolio of Stock and CTA
+title: Portfolio of Stock and CTA (Portfolio)
 ---
 # Risk-Parity: determine the strategy's weight
 The weight of a product's position is determined by its standard deviation's reciprocal. More academic resources can be found in [Qian2005](http://www.dailyalts.com/wp-content/uploads/2014/06/Risk-Parity-and-Diversification.pdf)
